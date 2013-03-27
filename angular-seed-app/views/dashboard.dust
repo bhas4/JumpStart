@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <title>AngularJS Seed App | LiftOff LLC</title>
+    <link rel="stylesheet" href="public/styles/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <div class="container" ng-app="donorApp" ng-controller="BaseCtrl">
+
+      <div class="masthead">
+        <h3 class="muted">Online Eye Donation Signup</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Users Currently Signed Up!</h1>
+        <div class="row" style="padding-bottom: 10px">
+          <!-- AngularJS - driven new HTML dom that helps you create element & attach the required event / functions -->
+          <create-user></create-user>
+        </div>  
+        <div ng-view class="row"></div>        
+      </div>
+
+      <hr>
+
+      <!-- Example row of columns -->
+      <div class="row-fluid">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a href="#" class="btn">View details »</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a href="#" class="btn">View details »</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+          <p><a href="#" class="btn">View details »</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div> <!-- /container -->
+
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/public/js/angular/scripts/vendor/angular.min.js" type="text/javascript"></script>
+  <script src="/public/js/angular/scripts/vendor/angular-resource.js" type="text/javascript"></script>
+  <script src="/public/js/angular/scripts/vendor/bootstrap.min.js" type="text/javascript"></script>
+
+  <!-- main app JS, that ties things together -->
+  <script src="/public/js/angular/scripts/donor.js" type="text/javascript"></script>
+
+  <!-- include the controllers here -->
+  <script src="/public/js/angular/scripts/controllers/base.js" type="text/javascript"></script>
+  <script src="/public/js/angular/scripts/controllers/user.js" type="text/javascript"></script>
+
+  <!-- include the controllers here -->
+  <script src="/public/js/angular/scripts/services/user.js" type="text/javascript"></script>
+
+  <!-- your directives -->
+  <script src="/public/js/angular/scripts/directives/component.js" type="text/javascript"></script>  
+</body></html>
