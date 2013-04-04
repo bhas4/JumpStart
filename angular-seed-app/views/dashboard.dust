@@ -9,7 +9,7 @@
     <div class="container" ng-app="donorApp" ng-controller="BaseCtrl">
 
       <div class="masthead">
-        <h3 class="muted">Online Eye Donation Signup</h3>
+        <h3 class="muted">Eye Donation Signup</h3>
         <div class="navbar">
           <div class="navbar-inner">
             <div class="container">
