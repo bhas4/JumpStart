@@ -24,3 +24,22 @@ componentModule.directive('createUser', function(user) {
     templateUrl: '/public/js/angular/views/create_user.html'
   };
 });
+
+/*
+Helps in selecting the tab, currently clicked
+*/
+componentModule.directive('loTitles', function($rootScope) {
+  return {
+    restrict: 'A',
+    link: function(scope, elm, attr) {
+      var attrParams = scope.$eval(attr.loTitles);
+      $rootScope.$on('$routeChangeSuccess', function(scope, next, current) {
+        if(next.$$route && window.location.hash.indexOf(attrParams.tab) >= 0) {
+          elm.siblings('.active').removeClass('active');
+          elm.addClass('active');
+          document.title = attrParams.title+" | Angular Seed App";
+        }
+      });
+    }
+  };
+});

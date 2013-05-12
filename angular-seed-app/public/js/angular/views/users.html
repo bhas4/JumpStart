@@ -1,18 +1,27 @@
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="user in getDonorUsers()">
-      <td>{{user.first_name}}</td>
-      <td>{{user.last_name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.age}}</td>
-    </tr>
-  </tbody>  
-</table>
+<div class="jumbotron">
+  <h1>Users Currently Signed Up!</h1>
+  <div class="row" style="padding-bottom: 10px">
+    <!-- AngularJS - driven new HTML dom that helps you create element & attach the required event / functions -->
+    <create-user></create-user>
+  </div>  
+  <div class="row">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in getDonorUsers()">
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.age}}</td>
+        </tr>
+      </tbody>  
+    </table>
+  </div>        
+</div>

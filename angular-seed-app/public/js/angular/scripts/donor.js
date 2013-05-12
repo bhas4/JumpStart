@@ -9,9 +9,13 @@ var componentModule = angular.module('component', []);
 var donorApp = angular.module('donorApp', ['ngResource', 'component'])
     .config(['$routeProvider', function($routeProvider) {
       $routeProvider
-        .when('/:mode', {
+        .when('/all', {
           templateUrl: '/public/js/angular/views/users.html',
           controller: 'UserCtrl'
+        })
+        .when('/home', {
+          templateUrl: '/public/js/angular/views/home.html',
+          controller: 'HomeCtrl'
         })
         .otherwise({
           redirectTo: '/all'
