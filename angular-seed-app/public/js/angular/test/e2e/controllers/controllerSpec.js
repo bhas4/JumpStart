@@ -1,4 +1,4 @@
-describe("E2E: Testing Controllers", function() {
+describe("E2E: Testing Controllers Loading, via Routes", function() {
 
   beforeEach(function() {
     browser().navigateTo('/dashboard');

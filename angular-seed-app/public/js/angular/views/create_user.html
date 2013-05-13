@@ -1,5 +1,5 @@
 <!-- View for creating new user -->
-<div style="float: right"><button class="btn  btn-success" ng-click="openForm()">I want to Signup!</button></div>
+<div style="float: right"><button id="ui_create_btn" class="btn  btn-success" ng-click="openForm()">I want to Signup!</button></div>
 <div class="modal fade hide in" id="ui_createuser" aria-hidden="false" ng-controller="UserCtrl">
     <div class="modal-header">
         <button aria-hidden="true" data-dismiss="modal" class="close" type="button">X</button>
@@ -10,28 +10,28 @@
           <div class="row" style="padding-bottom: 20px">
               <div class="span2">
                   First Name
-                  <input type="text" ng-model="new_user.first_name" ng-required="true" style="height: 30px"/>
+                  <input type="text" id="first_name" ng-model="new_user.first_name" ng-required="true" style="height: 30px"/>
               </div>
               <div class="span1"></div>
               <div class="span2">
                   Last Name
-                  <input type="text" ng-model="new_user.last_name" ng-required="true" style="height: 30px"/>
+                  <input type="text" id="last_name" ng-model="new_user.last_name" ng-required="true" style="height: 30px"/>
               </div>          
           </div>
           <div class="row">
               <div class="span2">
                   Email Address
-                  <input type="text" ng-model="new_user.email" ng-required="true" style="height: 30px"/>
+                  <input type="text" id="email" ng-model="new_user.email" ng-required="true" style="height: 30px"/>
               </div>
               <div class="span1"></div>
               <div class="span2">
                   Age
-                  <input type="text" ng-model="new_user.age" style="height: 30px"/>
+                  <input type="text" id="age" ng-model="new_user.age" style="height: 30px"/>
               </div>          
           </div>
           <div class="form-actions">
               <a class="btn btn-large btn-secondary" href="javascript:void(0)" ng-click="closeForm()">Cancel</a>
-              <input type="button" class="btn btn-large btn-primary" href="javascript:void(0)" ng-disabled="createUser.$invalid" ng-click="addDonor()" value="Submit"/>
+              <input type="button" class="btn btn-large btn-primary" href="javascript:void(0)" ng-disabled="createUser.$invalid" ng-click="addDonor()" id="btn_submit" value="Submit"/>
           </div>      
       </form>
     </div>
