@@ -13,6 +13,10 @@ var donorApp = angular.module('donorApp', ['ngResource', 'component'])
           templateUrl: '/public/js/angular/views/users.html',
           controller: 'UserCtrl'
         })
+        .when('/visitor', {
+          templateUrl: '/public/js/angular/views/visitors.html',
+          controller: 'VisitorCtrl'
+        })
         .when('/home', {
           templateUrl: '/public/js/angular/views/home.html',
           controller: 'HomeCtrl'

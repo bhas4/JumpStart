@@ -20,7 +20,9 @@
                 <li lo-titles="{'tab': 'all', 'title': 'Users'}">
                   <a href="#/all">Users</a>
                 </li>
-                <li><a href="#">Services</a></li>
+                <li lo-titles="{'tab': 'visitor', 'title': 'Visitors'}">
+                  <a href="#/visitor">Visitors</a>
+                </li>
                 <li><a href="#">Downloads</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
@@ -74,6 +76,7 @@
   <script src="/public/js/angular/scripts/controllers/home.js" type="text/javascript"></script>
   <script src="/public/js/angular/scripts/controllers/base.js" type="text/javascript"></script>
   <script src="/public/js/angular/scripts/controllers/user.js" type="text/javascript"></script>
+  <script src="/public/js/angular/scripts/controllers/visitor.js" type="text/javascript"></script>
 
   <!-- include the controllers here -->
   <script src="/public/js/angular/scripts/services/user.js" type="text/javascript"></script>

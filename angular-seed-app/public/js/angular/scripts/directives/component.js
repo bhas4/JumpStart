@@ -26,6 +26,27 @@ componentModule.directive('createUser', function(user) {
 });
 
 /*
+Directive that would demonstrate use of different types of scope variable declaration in association with parent scope
+*/
+componentModule.directive('loStyle', function($rootScope) {
+  return {
+    restrict: 'A',
+    scope: {  //new scope defined, only variables declared below be accessible
+      data:'=', //setup for 2-way data binding
+      bg: '&',  //variable available as function to invoke on parent scope
+      fs:'@'    //evaluated expression of parent scope, changing font size inside directive will not help
+    },
+    link: function(scope, elm, attr) {
+      //invoke the parent scope function, using delegate & set it back to parent scope object
+      scope.data.style.bgcolor = scope.bg();
+
+      //this will not impact, as expression will override after this is set
+      scope.fs = '24px';
+    }
+  };
+});
+
+/*
 Helps in selecting the tab, currently clicked
 */
 componentModule.directive('loTitles', function($rootScope) {

@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1>Visitors to the site!</h1>
+  <div class="row">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date of Visit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in visitors | filter: checkFonts" style="background-color: {{user.style.bgcolor}};">
+          <td lo-style data="user" bg="getBGColor()" fs="{{user.style.font_size}}" style="font-size: {{fs}}">{{data.name}}</td>
+          <td>{{user.date}}</td>
+        </tr>
+      </tbody>  
+    </table>
+  </div>        
+</div>

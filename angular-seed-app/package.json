@@ -1,5 +1,6 @@
 {
-  "name": "JumpStart-LiftOff",
+  "name": "JumpStart-bhas4",
+  "description": "Collection of AngularJS related source code samples",
   "version": "0.0.1",
   "private": true,
   "scripts": {
