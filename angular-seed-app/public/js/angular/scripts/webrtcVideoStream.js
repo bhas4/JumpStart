@@ -58,8 +58,6 @@ function sessionConnectedHandler(event) {
     }
     subscribeToStreams(event.streams)
   }
-  $("#ui_event").scope().chat = {msg: "joined the Chat"};
-  $("#ui_event").scope().sendMessage();
 }
 
 function streamCreatedHandler(event) {
