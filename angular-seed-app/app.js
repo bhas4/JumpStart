@@ -28,6 +28,7 @@ app.configure(function(){
 app.get('/dashboard', donor.dashboard);
 app.get('/users/list', donor.getUsers);
 app.post('/users/create', donor.createUser);
+app.get('/livechat', donor.livechat);
 
 var server = http.createServer(app);
 

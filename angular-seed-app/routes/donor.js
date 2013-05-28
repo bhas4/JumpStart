@@ -32,3 +32,7 @@ exports.getUsers = function(req, res){
   res.write(JSON.stringify(users));
   res.end();
 };
+
+exports.livechat = function(req, res){
+  res.render('opentok', {});
+};

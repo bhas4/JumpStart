@@ -1,69 +1,4 @@
-<html lang="en">
-  <head>
-    <title>AngularJS Seed App | LiftOff LLC</title>
-    <link rel="stylesheet" href="public/styles/bootstrap.min.css">
-  </head>
-
-  <body>
-
-    <div class="container" ng-app="donorApp" ng-controller="BaseCtrl">
-
-      <div class="masthead">
-        <h3 class="muted">Eye Donation Signup</h3>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active" lo-titles="{'tab': 'home', 'title': 'Home'}">
-                  <a href="#/home">Home</a>
-                </li>
-                <li lo-titles="{'tab': 'all', 'title': 'Users'}">
-                  <a href="#/all">Users</a>
-                </li>
-                <li lo-titles="{'tab': 'visitor', 'title': 'Visitors'}">
-                  <a href="#/visitor">Visitors</a>
-                </li>
-                <li><a href="#">Downloads</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div><!-- /.navbar -->
-      </div>
-
-      <!-- Angular template view, will be loaded into this div -->
-      <div id="ng-view" ng-view></div>
-
-      <hr>
-
-      <!-- Example row of columns -->
-      <div class="row-fluid">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a href="#" class="btn">View details »</a></p>
-        </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a href="#" class="btn">View details »</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a href="#" class="btn">View details »</a></p>
-        </div>
-      </div>
-
-      <hr>
-
-      <div class="footer">
-        <p>&copy; Company 2013</p>
-      </div>
-
-    </div> <!-- /container -->
-
+{<more_head_opts}
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
   <script src="/public/js/angular/scripts/vendor/angular.min.js" type="text/javascript"></script>
   <script src="/public/js/angular/scripts/vendor/angular-resource.js" type="text/javascript"></script>
@@ -83,4 +18,31 @@
 
   <!-- your directives -->
   <script src="/public/js/angular/scripts/directives/component.js" type="text/javascript"></script>  
-</body></html>
+{/more_head_opts}
+
+{>layout/}
+{<content}
+    <!-- Angular template view, will be loaded into this div -->
+    <div id="ng-view" ng-view></div>
+
+    <hr>
+
+    <!-- Example row of columns -->
+    <div class="row-fluid">
+      <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a href="#" class="btn">View details »</a></p>
+      </div>
+      <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a href="#" class="btn">View details »</a></p>
+     </div>
+      <div class="span4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+        <p><a href="#" class="btn">View details »</a></p>
+      </div>
+    </div>
+{/content}
