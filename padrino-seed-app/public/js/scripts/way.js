@@ -1,0 +1,1 @@
+var wayApp = angular.module('wayApp', ['firebase']);
