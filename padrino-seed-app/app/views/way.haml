@@ -34,9 +34,9 @@
         .span6
           %h2 Adding a New Message
           %form
-            %input{:type => "text", "ng-model" => "from", :style=> "height: 25px"}
+            %input{:type => "text", "ng-model" => "from", :style=> "height: 25px", :placeholder => "You name"}
             %br/
-            %textarea{:rows => "2", "ng-model" => "body"}
+            %textarea{:rows => "2", "ng-model" => "body", :placeholder => "Your message"}
             %br/
             %a.btn.btn-success{"ng-click" => "addMessage()"} Send
         .span4
