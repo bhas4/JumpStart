@@ -11,9 +11,10 @@
     "redis":"*",
     "connect-redis":"*",
     "dustjs-linkedin":"*",
-    "dustjs-helpers":"*",    
+    "dustjs-helpers":"*",
     "consolidate":"*",
-    "socket.io":"*"
+    "socket.io":"*",
+    "googleapis": "*"
   },
   "engines": {
     "node": "0.8.4",

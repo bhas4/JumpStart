@@ -2,11 +2,12 @@ var express = require('express')
   , path = require('path')
   , http = require('http')
   , push = require('./routes/push')
+  , ga = require('./routes/ga')
   , dust = require('dustjs-linkedin')
   , cons = require('consolidate');
 
 dust.helper = require('dustjs-helpers');
- 
+
 // redis connect
 var connect = require('connect');
 
@@ -30,9 +31,9 @@ app.engine('dust', cons.dust);
 //configure the app, will be started later
 app.configure(function(){
   app.set('views', __dirname + '/views');
-  app.set('view engine', 'dust');  
+  app.set('view engine', 'dust');
   app.use(express.cookieParser());
-  app.use(express.session({secret: 'Demo', key: 'WORKS', cookie:{maxAge: 3000099}}));  
+  app.use(express.session({secret: 'Demo', key: 'WORKS', cookie:{maxAge: 3000099}}));
   app.use("/public", express.static(path.join(__dirname, 'public')));
   app.use(app.router);
   app.set('port', process.env.PORT || '3099');
@@ -42,6 +43,7 @@ app.configure(function(){
 //another one for viewing the pushed notifications
 app.get('/send', push.send);
 app.get('/view', push.view);
+app.get('/ga', ga.queryGoogleAnalyticsData);
 
 /**
  * subscribe to redis channel when client in ready
@@ -53,9 +55,9 @@ redisClient.on('ready', function() {
 
 /**
  * wait for messages from redis channel, on message
- * send updates on the rooms named after channels. 
- * 
- * This sends updates to users. 
+ * send updates on the rooms named after channels.
+ *
+ * This sends updates to users.
  */
 redisClient.on("message", function(channel, message){
   console.log('Received message at Redis = '+channel+', message = '+message);
@@ -74,7 +76,7 @@ server.listen(app.get('port'), function(){
  * socket io client, which listens for new websocket connection
  * and then handles various requests
  */
-io.sockets.on('connection', function (socket) {  
+io.sockets.on('connection', function (socket) {
   //on subscription request joins specified room
   //later messages are broadcasted on the rooms
   socket.on('subscribe', function (data) {
